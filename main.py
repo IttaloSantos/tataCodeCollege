@@ -2,18 +2,17 @@
 # -*- coding: utf-8 -*-
 
 from institutionSystem.platform import institutionPlatform
-from getpass import getpass
+from institutionSystem import utils
 
 def main():
 
-    print("################################################################"    )
-    print("#               Welcome to Tata Code College!                  #"    )
-    print("################################################################\n\n")
+    print("################################################################"                     )
+    print("#               ",utils.colored("Welcome to Tata Code College!", "cyan"),"                #")
+    print("################################################################\n\n"                 )
 
-    admLogin        = input("Input adm login: "     )
-    admPass         = getpass("Input adm password: ")
+    tataCodeCollege = institutionPlatform()
 
-    tataCodeCollege = institutionPlatform(admLogin, admPass)
+    tataCodeCollege.menu()
 
     print("\n\nDone!\n\n")
 
